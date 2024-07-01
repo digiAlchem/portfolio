@@ -1,0 +1,19 @@
+// Add alpha by colour mixing with transparent
+@function alpha($variable, $amount) {
+  @return color-mix(in srgb, #{$variable}, transparent #{$amount});
+}
+
+// Lighten colour by colour mixing with white
+@function lighten($variable, $amount) {
+  @return color-mix(in srgb, #{$variable}, rgb(255, 255, 255) #{$amount});
+}
+
+// Darken colour by colour mixing with black
+@function darken($variable, $amount) {
+  @return color-mix(in srgb, #{$variable}, rgb(0, 0, 0) #{$amount});
+}
+
+// Blend two colours together by specified percentage
+@function blend($variable, $blend, $amount) {
+  @return color-mix(in srgb, #{$variable}, #{$blend}, #{$amount});
+}

@@ -11,12 +11,15 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@mantine/hooks": "^7.11.0",
+    "@radix-ui/react-dropdown-menu": "^2.1.1",
     "@remix-run/node": "^2.10.0",
     "@remix-run/react": "^2.10.0",
     "@remix-run/serve": "^2.10.0",
     "isbot": "^4.1.0",
     "lucide-react": "^0.399.0",
     "react": "^18.2.0",
+    "react-custom-events": "^1.1.1",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

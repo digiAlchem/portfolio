@@ -1,0 +1,41 @@
+// Create base light theme
+:root,
+[data-theme="light"] {
+  --animation-speed: 0.3s;
+  --background: rgb(217, 181, 255);
+  --background-dim: rgb(184, 140, 231);
+  --button: rgb(99, 27, 176);
+  --button-hover: rgb(69, 17, 124);
+  --menu: rgb(110, 57, 166);
+  --menu-hover: rgb(89, 45, 137);
+  --menu-selected: rgb(80, 41, 123);
+  --text: rgb(20, 20, 20);
+  --text-hover: rgb(79, 4, 113);
+  --text-inverse: rgb(230, 230, 230);
+}
+
+// Create dark theme
+@mixin dark-theme {
+  --background: rgb(61, 29, 95);
+  --background-dim: rgb(109, 73, 149);
+  --button: rgb(161, 92, 230);
+  --button-hover: rgb(165, 120, 210);
+  --menu: rgb(166, 119, 216);
+  --menu-hover: rgb(153, 96, 211);
+  --menu-selected: rgb(141, 79, 208);
+  --text: rgb(230, 230, 230);
+  --text-hover: rgb(203, 104, 249);
+  --text-inverse: rgb(20, 20, 20);
+}
+
+// Use dark theme if selected
+[data-theme="dark"] {
+  @include dark-theme();
+}
+
+// Use dark theme if system prefers it
+[data-theme="system"] {
+  @media (prefers-color-scheme: dark) {
+    @include dark-theme();
+  }
+}

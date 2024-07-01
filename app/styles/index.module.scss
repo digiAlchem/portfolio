@@ -1,0 +1,27 @@
+@forward "global";
+@use "functions" as func;
+
+.githubLink {
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  gap: 0.5rem;
+}
+
+.header {
+  margin-top: 1rem;
+}
+
+.heroImage {
+  margin-bottom: 0.75rem;
+}
+
+.mainText {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.subText {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}

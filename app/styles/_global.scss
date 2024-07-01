@@ -1,0 +1,102 @@
+// Import additional stylesheets
+@forward "reset";
+@forward "themes";
+@use "functions" as func;
+
+// Import font families
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+// Global styles
+a {
+  color: var(--text);
+  text-decoration: underline;
+  transition: color var(--animation-speed) ease-in;
+
+  &:hover {
+    color: var(--text-hover);
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Titillium Web", sans-serif;
+  font-size: 24px;
+  transition: background-color var(--animation-speed) ease-in, color var(--animation-speed) ease-in;
+}
+
+button {
+  background-color: var(--button);
+  border: 0.125rem solid var(--button-hover);
+  border-radius: 0.25rem;
+  color: var(--text-inverse);
+  outline: 0;
+  padding: 0.25rem;
+  transition: background-color var(--animation-speed) ease-in, color var(--animation-speed) ease-in;
+
+  &:hover,
+  &[data-state="open"] {
+    background-color: var(--button-hover);
+    cursor: pointer;
+  }
+
+  &:focus {
+    background-color: var(--button-hover);
+    box-shadow: func.alpha(var(--button), 50%) 0 0 0 0.25rem;
+  }
+}
+
+// Specific global classes
+.body-container {
+  container-name: bodyContainer;
+  container-type: inline-size;
+  padding: 1rem 0;
+}
+
+.card {
+  border-radius: 0.5rem;
+  background-color: var(--background-dim);
+  box-shadow: 0.25rem 0.25rem func.darken(var(--background-dim), 25%);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  gap: 0.5rem;
+  margin: auto;
+  width: 95%;
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.switcher {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+// Remove animations if system prefers reduced motion or manually disabled
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// Make any style changes based on container size
+@container bodyContainer (min-width: 512px) {
+  .card {
+    width: 80%;
+  }
+
+  .switcher {
+    flex-direction: row;
+  }
+}

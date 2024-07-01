@@ -5,7 +5,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import "./styles/global.module.scss";
+import "./styles/_global.scss";
+import { Header } from "./components/Header";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -17,7 +18,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body data-theme="light">
-        {children}
+        <Header />
+        <div className="body-container">
+          {children}
+        </div>
         <ScrollRestoration />
         <Scripts />
       </body>

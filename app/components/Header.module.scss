@@ -1,0 +1,58 @@
+@use "../styles/functions" as func;
+
+.header {
+  align-items: center;
+  background-color: var(--background-dim);
+  box-shadow: 0.125rem 0.125rem 0.25rem 0.25rem func.alpha(func.darken(var(--background-dim), 75%), 60%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  &Title {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  &Button {
+    align-items: center;
+    display: flex;
+  }
+
+  &Menu {
+    background-color: var(--menu);
+    box-shadow: 0.25rem 0.25rem func.darken(var(--menu), 50%);
+    color: var(--text-inverse);
+    user-select: none;
+    z-index: 2;
+
+    &Item {
+      align-items: center;
+      display: flex;
+      font-size: 1rem;
+      gap: 1rem;
+      justify-content: space-between;
+      padding: 0.5rem;
+      outline: 0;
+
+      &:hover,
+      &:focus {
+        background-color: var(--menu-hover);
+        cursor: pointer;
+      }
+
+      &[data-selected="true"] {
+        background-color: var(--menu-selected);
+      }
+    }
+
+    &Arrow {
+      fill: var(--menu);
+    }
+  }
+}
