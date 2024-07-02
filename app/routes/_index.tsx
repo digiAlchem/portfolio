@@ -49,7 +49,7 @@ export default function Index() {
                 Javascript, Typescript
               </li>
               <li>
-                CSS modules, SASS
+                CSS modules, SASS, Tailwind
               </li>
               <li>
                 React frameworks (Remix, Next.js)
