@@ -1,15 +1,29 @@
 @forward "global";
 @use "functions" as func;
 
+.portrait {
+  border-radius: 3rem;
+  max-width: 20rem;
+}
+
 .githubLink {
   align-items: center;
   display: flex;
   font-size: 1rem;
   gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.mainLink {
+  align-items: center;
+  display: flex;
+  font-size: 1.25rem;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .header {
-  margin-top: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .heroImage {
@@ -18,10 +32,11 @@
 
 .mainText {
   font-size: 1.25rem;
+  font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
-.subText {
+.subText:not(:last-of-type) {
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }

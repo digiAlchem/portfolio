@@ -37,7 +37,7 @@ export const Header = () => {
             {getCurrentThemeIcon()}
           </DropdownMenu.Trigger>
             <DropdownMenu.Portal>
-            <DropdownMenu.Content align="end" alignOffset={8} className={styles.headerMenu}>
+            <DropdownMenu.Content align="end" alignOffset={8} className={styles.headerMenu} loop={true}>
               <DropdownMenu.Item
                 className={styles.headerMenuItem}
                 data-selected={currentTheme === "system"}
