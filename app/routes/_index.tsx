@@ -27,8 +27,8 @@ export default function Index() {
               Hi there! My name is Jonny Shuttleworth, and I'm a web developer specialising in React-based frontend development and UI libraries.
             </div>
             <div className={styles.subText}>
-              I've been writing code since 2016 in a variety of languages (starting with PHP!) and have since specialised into Javascript-based
-              development that focuses on mobile-first styling and reusable component systems.
+              I've been professionally writing code since 2015 in a variety of languages (starting with Bash and PHP!) and have since specialised into
+              Javascript-based development that focuses on mobile-first styling and reusable component systems.
             </div>
           </div>
         </div>
