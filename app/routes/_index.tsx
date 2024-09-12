@@ -55,7 +55,10 @@ export default function Index() {
                 React frameworks (Remix, Next.js)
               </li>
               <li>
-                NPM
+                Unit testing (React Testing Library, Vitest)
+              </li>
+              <li>
+                NPM, PNPM
               </li>
               <li>
                 Git, GitHub
@@ -92,10 +95,21 @@ export default function Index() {
                 Google Cloud
               </li>
               <li>
-                Netlify
+                Netlify, Fly.io
               </li>
               <li>
                 Supabase
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Other</h3>
+            <ul>
+              <li>
+                Remote working
+              </li>
+              <li>
+                UX/UI collaboration
               </li>
             </ul>
           </div>
@@ -156,7 +170,7 @@ export default function Index() {
               <img src={EmisXDemo} />
             </div>
             <div className={styles.mainText}>
-              As part of a dedicated UI team, I help to create and maintain a custom component library for the new version of the UK's leading
+              As part of a dedicated UI team, I helped to create and maintain a custom component library for the new version of the UK's leading
               clinical system.
             </div>
             <div className={styles.subText}>
